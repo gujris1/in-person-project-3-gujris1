@@ -5,35 +5,38 @@
 const portfolio = {
     // Personal information object
     owner: {
-        name: "Your Name Here",        // TODO: Add your name
-        title: "Your Title Here",      // TODO: Add your professional title
-        email: "your.email@example.com", // TODO: Add your email
-        location: "Your City, State",  // TODO: Add your location
-        bio: "Write a brief description about yourself here. What are you passionate about? What are your goals?" // TODO: Add your bio
+        name: "Gujri Singh",
+        title: "UX Engineer",
+        email: "gujri.singh@berkeley.edu",
+        location: "Berkeley, CA",
+        bio: "Current graduate student at UC Berkeley passionate about the intersection of UX and engineering."
     },
     
     // Skills as an array
     skills: [
-        "Add your first skill here",   // TODO: Replace with your actual skills
-        "Add your second skill here",  // TODO: Add more skills
-        "Add your third skill here"    // TODO: Students should have at least 5 skills
-        // TODO: Add more skills - aim for 5-7 skills total
+        "HTML5 & Semantic Markup",
+        "CSS3 & Responsive Design",
+        "JavaScript Fundamentals",
+        "Prototyping",
+        "Usability Testing",
+        "Python",
+        "R"
     ],
     
     // Projects as array of objects
     projects: [
         {
-            title: "Your First Project",
-            description: "Describe what this project does and why it's interesting",
-            technologies: ["HTML", "CSS"], // Array of technologies used
-            completionDate: "2025-08-15",   // When you completed it
+            title: "Evaluating Auto-Generated Subject Tags",
+            description: "Evaluated an NLP-based auto-classification system for a document management platform, comparing subject tags generated for technical reports with domain terminology to identify gaps affecting search and discovery.",
+            technologies: ["Information Architecture", "UX Research", "Wireframing"], // Array of technologies used
+            completionDate: "2026-08-07",   // When you completed it
             featured: true                   // Is this a featured project?
         },
         {
-            title: "Your Second Project", 
-            description: "Another project description here",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            completionDate: "2025-09-01",
+            title: "Diabetes Social Media Sentiment Analysis", 
+            description: "Analyzed diabetes-related social media posts using Python and NLP techniques to identify sentiment and patterns in patient experiences with diabetes technologies and care.",
+            technologies: ["Python", "VADER", "NLP"],
+            completionDate: "2026-05-01",
             featured: false
         }
         // TODO: Add more projects during class
@@ -56,6 +59,9 @@ console.log("Full portfolio object:", portfolio);
 // console.log("Owner name:", portfolio.owner.name);
 // console.log("First skill:", portfolio.skills[0]);
 // console.log("Number of projects:", portfolio.projects.length);
+console.log("My name:", portfolio.owner.name);
+console.log("Total skills:", portfolio.skills.length);
+console.log("First project:", portfolio.projects[0]);
 
 // TODO: Students will learn to access nested properties
 // console.log("Email:", portfolio.owner.email);
@@ -65,3 +71,15 @@ console.log("Full portfolio object:", portfolio);
 // TODO: Students will create summary strings using template literals
 // let summary = `${portfolio.owner.name} is a ${portfolio.owner.title} with ${portfolio.skills.length} skills.`;
 // console.log("Summary:", summary);
+
+// Create summary statistics
+console.log("Portfolio Summary:");
+console.log(`${portfolio.owner.name} has ${portfolio.skills.length} skills`);
+console.log(`and ${portfolio.projects.length} projects`);
+
+// Find featured projects
+for (let i = 0; i < portfolio.projects.length; i++) {
+    if (portfolio.projects[i].featured === true) {
+        console.log("⭐ Featured:", portfolio.projects[i].title);
+    }
+}
